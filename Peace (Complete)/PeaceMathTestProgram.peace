@@ -1,0 +1,43 @@
+PROG PeaceMathTestProgram
+
+	integer - nTest, nfTest, aTest, bTest, gcdTest;
+	
+	integer factorial(integer n)
+	{
+		integer i, nf;
+		i = 1;
+		nf = i;
+		WHILE(i <= n)
+		{
+			nf = nf * i;
+			i = i + 1;
+		};
+		
+		return nf
+	};
+	
+	integer gcd(integer a, integer b)
+	{
+		WHILE(a != b)
+		{
+			IF a > b
+				a = a - b;
+			IF a <= b
+				b = b - a;
+		};
+		return a
+	};
+
+MAIN
+{
+	nTest = 5;
+	aTest = 9;
+	bTest = 15;
+	
+	nfTest = factorial(nTest);
+	PRINT("%d! = %d\n", nTest, nfTest);
+	
+	gcdTest = gcd(aTest, bTest);
+	PRINT("the gcd of %d and %d is %d\n", aTest, bTest, gcdTest);
+}
+ENDPROG

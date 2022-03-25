@@ -1,0 +1,4 @@
+5! = 120
+the gcd of 9 and 15 is 3
+
+                0.03 seconds total execution time.

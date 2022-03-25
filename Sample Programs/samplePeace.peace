@@ -1,0 +1,41 @@
+PROG samplePeace
+
+    integer - i, j;
+    real - alpha, beta;
+
+    VOID addAlpha(real a, real & b)
+    {
+       alpha = a + b;
+    };
+
+    integer sub(integer x, integer y)
+    {
+   	   integer d;
+   	   d = x - y;
+       return d
+    };
+    
+MAIN {
+    
+    integer t1, t2, t3;
+    real gamma;
+    gamma = 4.5; 
+    beta = 1.1;
+  
+    
+    t1 = 1;
+    t2 = 5;
+    t3 = t2;
+    
+    addAlpha(beta, gamma);
+    t3 = sub(t2, t1);
+    
+
+    PRINT("alpha = %f and t3 = %d", alpha, t3);
+    
+    
+    
+
+
+
+}ENDPROG

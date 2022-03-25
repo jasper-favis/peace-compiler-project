@@ -1,0 +1,111 @@
+PROG PeaceTestProgram
+	
+	integer - s, n;
+	
+	VOID diamondTopHalf(integer sizeT, integer numT)
+	{
+		integer space, i, j;
+		integer k;
+		space = sizeT/2 - 1;
+		k = 1;
+		
+		WHILE(k <= sizeT/2)
+		{
+			j = 1;
+			WHILE(j <= numT)
+			{
+				i = 1;
+				WHILE(i <= space)
+				{
+					PRINT(" ");
+					i = i + 1;
+				};
+				
+				i = 1;
+				
+				WHILE(i <= (2*(sizeT/2 - space)-1))
+				{
+					PRINT("*");
+					i = i + 1;
+				};
+				
+				i = 1;
+				
+				WHILE(i <= space)
+				{
+					PRINT(" ");
+					i = i + 1;
+				};
+				
+				j = j + 1;
+				
+			};
+			PRINT("\n");
+			space = space - 1;
+			k = k + 1;
+		};
+	};
+	
+	VOID diamondBottomHalf(integer sizeB, integer numB)
+	{
+		integer spaceB, iB, jB, kB;
+		spaceB = 1; 
+		kB = 1;
+		
+		
+		WHILE(kB <= sizeB/2)
+		{
+
+			jB = 1;
+			WHILE(jB <= numB)
+			{
+				iB = 1;
+				WHILE(iB <= spaceB)
+				{
+					PRINT(" ");
+					iB = iB + 1;
+				};
+				
+				iB = 1;
+				
+				WHILE(iB <= (2*(sizeB/2 - spaceB)-1))
+				{
+					PRINT("*");
+					iB = iB + 1;
+				};
+				
+				iB = 1;
+				
+				WHILE(iB <= spaceB)
+				{
+					PRINT(" ");
+					iB = iB + 1;
+				};
+				
+				jB = jB + 1;
+
+			}; 
+			
+			PRINT("\n");
+			spaceB = spaceB + 1;
+			kB = kB + 1;
+		};
+	};
+	
+	VOID fullDiamond(integer size, integer num)
+	{
+		diamondTopHalf(size, num);
+		diamondBottomHalf(size, num);
+	};
+	
+	
+
+
+MAIN 
+{
+	s = 12;
+	n = 5;
+	
+	fullDiamond(s, n);
+}
+ENDPROG
